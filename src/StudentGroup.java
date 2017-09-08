@@ -13,8 +13,9 @@ import java.util.Date;
  */
 public class StudentGroup implements StudentArrayOperation {
 
-	private Student[] students;
-	
+	private Student[] students 
+        
+	ArrayList al=new ArrayList();
 	/**
 	 * DO NOT remove or change this constructor, it will be used during task check
 	 * @param length
@@ -22,21 +23,17 @@ public class StudentGroup implements StudentArrayOperation {
 	public StudentGroup(int length) {
 		this.students = new Student[length];
 	}
-Scanner s=new Scanner(System.in);
-
+         
+        ArrayList al=new ArrayList();
 	@Override
 	public Student[] getStudents() 
         {
-                int i,student[length];
-		for(i=0;i<students;i++)
-                 {
-                   students[i]=s.nextInt();
-                  }
-		return null;
-	}
-
+               
+         }
 	@Override
-	public void setStudents(Student[] students) {
+	public void setStudents(Student[] students)
+        { 
+           
 		
 	}
 
@@ -60,33 +57,36 @@ Scanner s=new Scanner(System.in);
 
 	@Override
 	public void addFirst(Student student) {
-		// Add your implementation here
+		al.addFirst("student");
 	}
 
 	@Override
-	public void addLast(Student student) {
-		// Add your implementation here
+	public void addLast(Student student) 
+           {
+                v=student;
+		al.addLast("student");
 	}
 
 	@Override
-	public void add(Student student, int index) {
-		// Add your implementation here
+	public void add(Student student, int index) 
+        {
+		al.put(index,"student");
 	}
 
 	@Override
 	public void remove(int index)
            {
-		// Add your implementation here
+		al.remove(1);
 	}
 
 	@Override
 	public void remove(Student student) {
-		// Add your implementation here
+		al.remove("student");
 	}
 
 	@Override
 	public void removeFromIndex(int index) {
-		// Add your implementation here
+		al.removeFromIndex(2);
 	}
 
 	@Override
