@@ -22,22 +22,35 @@ public class StudentGroup implements StudentArrayOperation {
 	public StudentGroup(int length) {
 		this.students = new Student[length];
 	}
+Scanner s=new Scanner(System.in);
 
 	@Override
-	public Student[] getStudents() {
-		// Add your implementation here
+	public Student[] getStudents() 
+        {
+                int i,student[length];
+		for(i=0;i<students;i++)
+                 {
+                   students[i]=s.nextInt();
+                  }
 		return null;
 	}
 
 	@Override
 	public void setStudents(Student[] students) {
-		// Add your implementation here
+		
 	}
 
 	@Override
 	public Student getStudent(int index) {
-		// Add your implementation here
-		return null;
+		int k;
+                k=index;
+                for(i=0;i<students;i++)
+                 {
+                   if(students[i]==k)
+                    {
+                      int c=i;
+                    }
+		return i;
 	}
 
 	@Override
@@ -61,7 +74,8 @@ public class StudentGroup implements StudentArrayOperation {
 	}
 
 	@Override
-	public void remove(int index) {
+	public void remove(int index)
+           {
 		// Add your implementation here
 	}
 
@@ -91,9 +105,22 @@ public class StudentGroup implements StudentArrayOperation {
 	}
 
 	@Override
-	public void bubbleSort() {
-		// Add your implementation here
+	public void bubbleSort() 
+        {
+		int i,j;
+               for(i=0;i<students;i++)
+                {
+                  for(j=0;j<students-1;j++)
+                   {
+			if(students[j]>students[j+1])
+                          {
+                            temp=students[j];	
+			    students[j]=students[j+1];
+			    students[j+1]=temp;
 	}
+         }
+}
+} 
 
 	@Override
 	public Student[] getByBirthDate(Date date) {
